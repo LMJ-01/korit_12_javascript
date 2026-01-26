@@ -1,0 +1,244 @@
+/* ===== 폰트 ===== */
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== 기본 ===== */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0d1b2a; /* 딥 네이비 */
+    font-family: 'GmarketSansMedium';
+    color: #f5f5f5;
+}
+
+/* ===== Wrapper ===== */
+#contents {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== 타이틀 ===== */
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.clock_img {
+    width: 280px;
+    height: 280px;
+    opacity: 0.7;
+}
+
+.title_img {
+    position: absolute;
+    width: 500px;
+}
+
+.title_img img {
+    width: 100%;
+    height: auto;
+}
+
+/* ===== 인트로 ===== */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.intro_saying {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #ffd700; /* 고급스러운 골드 */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.explain p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.explain span {
+    font-family: 'GmarketSansBold';
+    color: #ffd700;
+}
+
+/* ===== 입력창 ===== */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.inputs div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputs input {
+    padding: 14px 22px;
+    margin: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #fefefe;
+    color: #0d1b2a;
+    font-size: 20px;
+    width: 220px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.inputs input:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+}
+
+/* ===== 버튼 ===== */
+button {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    color: #0d1b2a;
+    background: linear-gradient(145deg, #ffd700, #e6c200);
+    padding: 12px 45px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #ffe066, #e6c200);
+}
+
+.start .click_img {
+    position: absolute;
+    right: 700px;
+    bottom: -55px;
+}
+
+/* ===== 결과 로딩 ===== */
+.result_loading {
+    display: none;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.result_loading img {
+    width: 100px;
+    height: auto;
+    animation: rotate 1.2s infinite linear;
+    opacity: 0.8;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ===== 결과 ===== */
+.result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+
+.result span {
+    padding: 0 15px;
+    font-family: 'GmarketSansBold';
+    font-size: 60px;
+    color: #ffd700;
+}
+
+/* ===== 모달 ===== */
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 999;
+}
+
+.modal_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 580px;
+    height: 580px;
+    background: #fefefe;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.modal_wrap h1 {
+    font-size: 72px;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.modal_wrap h3 {
+    font-size: 26px;
+    color: #555;
+    text-align: center;
+}
+
+/* ===== 저작권 ===== */
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}

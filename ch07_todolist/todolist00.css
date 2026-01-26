@@ -1,0 +1,167 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Page ===== */
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f2933, #0b0f14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pretendard', 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+}
+
+/* ===== Background Grid ===== */
+.page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ===== Todo Block ===== */
+.todo {
+  width: 360px;
+  background: rgba(20, 24, 33, 0.9);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.35); }
+  100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.15); }
+}
+
+/* ===== Title ===== */
+.todo__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #00f5ff, #7c7cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Input ===== */
+.todo__input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo__input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: #e5e7eb;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #334155;
+}
+
+.todo__input:focus {
+  box-shadow: 0 0 0 1px #22d3ee, 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+.todo__add-btn {
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00f5ff, #6366f1);
+  color: #020617;
+  font-weight: bold;
+}
+
+.todo__add-btn:active {
+  transform: scale(0.95);
+}
+
+/* ===== List ===== */
+.todo__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo__list:empty::after {
+  content: '🧠 AI is waiting for your command...';
+  text-align: center;
+  color: #475569;
+  padding: 24px 0;
+  font-style: italic;
+}
+
+/* ===== Todo Item ===== */
+.todo__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #020617;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo__item--completed .todo__text {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+/* ===== Checkbox ===== */
+.todo__item input[type='checkbox'] {
+  accent-color: #22d3ee;
+}
+
+/* ===== Text ===== */
+.todo__text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+/* ===== Delete Button (Refined) ===== */
+.todo__delete-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease;
+}
+
+.todo__item:hover .todo__delete-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.todo__delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}

@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== 기본 ===== */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #0a0a0a, #1a1a1a);
+    font-family: 'GmarketSansMedium';
+    color: #f5f5dc; /* 연한 황금색 */
+}
+
+/* ===== Wrapper ===== */
+#contents {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== 타이틀 ===== */
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.clock_img {
+    width: 280px;
+    height: 280px;
+    animation: rotate 15s linear infinite;
+    filter: drop-shadow(0 0 25px #ff4c00);
+}
+
+.title_img {
+    position: absolute;
+    width: 500px;
+    animation: glitch 2s infinite;
+}
+
+.title_img img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px #ffd700);
+}
+
+/* ===== 글리치 애니메이션 ===== */
+@keyframes glitch {
+    0% { transform: translate(0,0); }
+    20% { transform: translate(-2px,2px); }
+    40% { transform: translate(2px,-2px); }
+    60% { transform: translate(-2px,-2px); }
+    80% { transform: translate(2px,2px); }
+    100% { transform: translate(0,0); }
+}
+
+/* ===== 인트로 ===== */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.intro_saying {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color: #ffd700; /* 황금색 */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ff0000;
+    margin-bottom: 50px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff4500, 0 0 40px #ff0000; }
+    100% { text-shadow: 0 0 30px #ffd700, 0 0 50px #ff6347; }
+}
+
+.explain p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #f5f5dc;
+}
+
+/* ===== 입력창 ===== */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.inputs div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inputs input {
+    padding: 15px 20px;
+    margin: 0 15px;
+    border: 2px solid #ff4c00;
+    border-radius: 12px;
+    background: #1a1a1a;
+    color: #ffd700;
+    font-size: 20px;
+    width: 220px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff4c00 inset;
+}
+
+.inputs input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #ff0000 inset, 0 0 10px #ffd700;
+}
+
+/* ===== 버튼 ===== */
+button {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #ffd700, #ff4c00);
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff4c00, 0 0 20px #ffd700;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.15) rotate(-3deg);
+    box-shadow: 0 0 25px #ff0000, 0 0 50px #ffd700;
+}
+.start .click_img {
+    position: absolute;
+    right: 700px;
+    bottom: -25px;
+}
+
+/* ===== 결과 로딩 ===== */
+.result_loading {
+    display: none;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.result_loading img {
+    width: 100px;
+    height: auto;
+    animation: rotate 1.2s infinite linear;
+    filter: drop-shadow(0 0 20px #ff4c00);
+}
+
+/* ===== 결과 ===== */
+.result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 80px;
+}
+
+.result span {
+    padding: 0 20px;
+    font-family: 'GmarketSansBold';
+    font-size: 70px;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ffd700;
+}
+
+/* ===== 모달 ===== */
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 999;
+}
+
+.modal_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    background: #1a0000;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ff0000, 0 0 50px #ffd700;
+}
+
+.modal_wrap h1 {
+    font-size: 80px;
+    color: #ff4c00;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ffd700;
+}
+
+.modal_wrap h3 {
+    font-size: 30px;
+    color: #ffd700;
+}
+
+/* ===== 저작권 ===== */
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    color: #aaa;
+}
