@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping List</title>
+  <link rel="stylesheet" href="./01_shoppinglist.css" />
+</head>
+<body class="page">
+  <div class="shopping">
+    <h1 class="shopping__title"> Shopping List</h1>
+
+    <div class="shopping__input-group">
+      <input
+        id="shopping-input"
+        class="shopping__input"
+        type="text"
+        placeholder="쇼핑리스트를 작성하세요."
+      />
+      <input
+        id="amount-input"
+        class="amount__input"
+        type="number"
+        placeholder="수량을 작성하세요."
+      />
+      <input
+        id="price-input"
+        class="price__input"
+        type="number"
+        placeholder="가격을 작성하세요."
+      />
+      <button id="add-btn" class="shopping__add-btn">추가</button>
+    </div>
+
+    <ul id="shopping-list" class="shopping__list"></ul>
+  </div>
+
+  <script src="./01_shoppinglist.js"></script>
+</body>
+</html>

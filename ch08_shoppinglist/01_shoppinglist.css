@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: 'Pretendard', 'Segoe UI', sans-serif;
+  color: #111827;
+  background:
+    radial-gradient(circle at 20% 10%, #fff7ed 0%, transparent 45%),
+    radial-gradient(circle at 80% 0%, #eff6ff 0%, transparent 50%),
+    #f8fafc;
+}
+
+.shopping {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.shopping__title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.shopping__input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.shopping__input {
+  grid-column: 1 / -1;
+}
+
+.shopping__input,
+.amount__input,
+.price__input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #111827;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.shopping__input::placeholder,
+.amount__input::placeholder,
+.price__input::placeholder {
+  color: #9ca3af;
+}
+
+.shopping__input:focus,
+.amount__input:focus,
+.price__input:focus {
+  border-color: #22c55e;
+  background: #ffffff;
+}
+
+.shopping__add-btn {
+  grid-column: 1 / -1;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #22c55e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.shopping__add-btn:hover {
+  background: #16a34a;
+}
+
+.shopping__add-btn:active {
+  transform: scale(0.97);
+}
+
+.shopping__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shopping__list:empty::after {
+  content: '🛒 필요한 물건을 추가해보세요';
+  text-align: center;
+  color: #9ca3af;
+  padding: 24px 0;
+  font-size: 0.95rem;
+}
+
+.shopping__item {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.shopping__item--completed {
+  opacity: 0.55;
+}
+
+.shopping__item-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shopping__item-top input[type='checkbox'] {
+  accent-color: #22c55e;
+  transform: scale(1.1);
+}
+
+.shopping__name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.shopping__item--completed .shopping__name {
+  text-decoration: line-through;
+}
+
+.shopping__item-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.shopping__meta {
+  white-space: nowrap;
+}
+
+.shopping__delete-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #fee2e2;
+  color: #ef4444;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.shopping__delete-btn:hover {
+  background: #fecaca;
+  transform: scale(1.1);
+}
+
+@media (max-width: 420px) {
+  .shopping {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .shopping__title {
+    font-size: 1.45rem;
+  }
+
+  .shopping__item-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
