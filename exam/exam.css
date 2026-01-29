@@ -1,0 +1,854 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,button,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,input[type=password],input[type=text],ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
+}
+
+ol,ul {
+    list-style: none
+}
+
+blockquote,q {
+    quotes: none
+}
+
+blockquote:after,blockquote:before,q:after,q:before {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+html {
+    width: 100%;
+    height: 100%
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    line-height: normal;
+    overflow-y: scroll
+}
+
+body,button,input,input[type=password],input[type=text] {
+    color: #17191d;
+    font: 12px NotoSansKRRegular,malgun gothic,"sans serif"
+}
+
+button,input,input[type=password],input[type=text] {
+    background-color: transparent
+}
+
+button {
+    cursor: pointer
+}
+
+b,strong {
+    font-weight: 700
+}
+
+a {
+    color: #17191d;
+    text-decoration: none;
+}
+
+.floatClear :after {
+    content: "";
+    clear: both;
+    display: block
+}
+
+.skipNav {
+    top: auto;
+    margin: 0 -1px -1px 0
+}
+
+.skipNav,.skipNav a {
+    position: absolute;
+    height: 1px;
+    width: 1px
+}
+
+.skipNav a {
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0
+}
+
+.skipNav a:active,.skipNav a:hover {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+    background-color: #fff;
+    color: #000;
+    z-index: 100000
+}
+
+.acchidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px
+}
+
+.headerMsg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #17191d;
+    z-index: 1000
+}
+
+.headerMsg p {
+    padding: 7px 14px
+}
+
+.headerMsg strong {
+    margin-right: 5px
+}
+
+.nexonLogin .loginMsg,.otpLogin .loginMsg {
+    display: none;
+    min-height: 28px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6060
+}
+
+.captchaMsg {
+    display: none;
+    padding-bottom: 39px;
+    margin-top: -21px;
+    line-height: 1.5
+}
+
+.captchaMsg,.otpLoginMsg {
+    letter-spacing: -.6px;
+    text-align: center;
+    color: #737881
+}
+
+.otpLoginMsg {
+    padding-bottom: 40px
+}
+
+.otpLoginMsg a {
+    font-weight: 700;
+    color: #737881;
+    text-decoration: underline
+}
+
+.qrLoginMsg {
+    letter-spacing: -.6px;
+    text-align: center;
+    color: #737881;
+    line-height: 1.55
+}
+
+.inputMsg {
+    display: none;
+    height: 28px;
+    margin-top: -6px;
+    font-weight: 700;
+    letter-spacing: -.6px;
+    text-align: left;
+    color: #ff6060
+}
+
+#wrapper .showMsg {
+    display: block
+}
+
+.header {
+    min-width: 328px;
+    padding-top: 120px;
+    text-align: center
+}
+
+.header .logo {
+    display: inline-block;
+    margin: 0 auto;
+    width: 120px;
+    height: 20px
+}
+
+.header .logo a {
+    display: block;
+    width: 120px;
+    height: 20px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_new_logo.svg) no-repeat 0 0
+}
+
+.header .tab {
+    height: 33px;
+    margin-top: 27px
+}
+
+.header .tab ul {
+    display: inline-block
+}
+
+.header .tab ul:after {
+    content: "";
+    clear: both
+}
+
+.header .tab li {
+    position: relative;
+    float: left;
+    display: block
+}
+
+.header .tab button {
+    display: block;
+    width: 105px;
+    height: 34px;
+    padding-bottom: 1px;
+    font-family: NEXON Gothic Bold;
+    color: #9fa1a7;
+    text-align: center;
+    border-bottom: 1px solid #e5e8eb;
+    transition: all .15s linear;
+    outline: 0
+}
+
+.header .tab button:hover {
+    color: #07f;
+    transition: all .2s linear
+}
+
+#wrapper {
+    max-width: 492px;
+    min-width: 360px;
+    min-height: 100%;
+    min-height: 100vh;
+    padding: 0 16px 200px;
+    margin: 0 auto
+}
+
+#contents,#wrapper {
+    position: relative
+}
+
+.nexonLogin {
+    padding-top: 60px
+}
+
+.otpLogin,.qrLogin {
+    padding-top: 40px
+}
+
+.id,.otppass,.pass {
+    height: 68px
+}
+
+.id input,.otppass input,.pass input {
+    width: 100%;
+    height: 56px;
+    padding: 18px 12px;
+    border: 1px solid #e5e8eb;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: 0;
+    transition: border-color .15s linear
+}
+
+.id input:focus,.otppass input:focus,.pass input:focus {
+    border: 2px solid #07f;
+    padding: 17px 11px;
+    transition: border-color .2s linear
+}
+
+.id input::placeholder,.otppass input::placeholder,.pass input::placeholder {
+    font-weight: 400;
+    color: #c7c8cc;
+    opacity: 1
+}
+
+.id input:-ms-input-placeholder,.otppass input:-ms-input-placeholder,.pass input:-ms-input-placeholder {
+    font-weight: 400;
+    color: #c7c8cc
+}
+
+.id input::-ms-input-placeholder,.otppass input::-ms-input-placeholder,.pass input::-ms-input-placeholder {
+    font-weight: 400;
+    color: #c7c8cc
+}
+
+.otppass input,.otppass input[type=password],.pass input,.pass input[type=password] {
+    font-family: pass,NotoSansKRRegular,malgun gothic,"sans serif"
+}
+
+@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active) {
+    .otppass input,.otppass input[type=password],.pass input,.pass input[type=password] {
+        font-family: NotoSansKRRegular,malgun gothic,"sans serif"
+    }
+}
+
+input[type=password]::-ms-reveal {
+    display: none
+}
+
+.otppass {
+    height: 68px
+}
+
+.otppass div {
+    float: left;
+    width: 50%
+}
+
+.otppass .otppass1 {
+    padding-right: 4px
+}
+
+.otppass .otppass2 {
+    padding-left: 4px
+}
+
+.otppass:after {
+    content: "";
+    clear: both
+}
+
+.saveid {
+    position: relative;
+    height: 42px
+}
+
+.saveid input {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap
+}
+
+.saveid label {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 26px;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: -.6px;
+    cursor: pointer
+}
+
+.saveid label:after,.saveid label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer
+}
+
+.saveid label:before {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #e5e8eb
+}
+
+.saveid label:after {
+    width: 18px;
+    height: 18px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_login.svg) no-repeat 0 -50px;
+    opacity: 0;
+    transition: all .15s linear
+}
+
+.saveid input:checked+label:after,.saveid input[check=true]+label:after {
+    opacity: 1;
+    transition: all .2s linear
+}
+
+.captchaSec {
+    width: 100%;
+    height: 78px;
+    margin: 0 0 30px;
+    padding: 1px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #e3e3e3
+}
+
+.captchaSec .captchaDeco {
+    width: 300px;
+    height: 74px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden
+}
+
+.captchaSec .captchaDeco>div {
+    margin: -1px 0 0 -1px
+}
+
+.qrSec {
+    height: 272px;
+    text-align: center
+}
+
+.qrSec .qrImg {
+    padding: 39px 0 12px
+}
+
+.qrSec .qrImg img {
+    width: 165px;
+    height: 165px
+}
+
+.qrSec .qrTime {
+    letter-spacing: -.6px;
+    color: #737881
+}
+
+.qrSec .qrTime dd,.qrSec .qrTime dt {
+    display: inline
+}
+
+.qrSec p {
+    padding-top: 92px;
+    line-height: 1.5;
+    letter-spacing: -.6px;
+    color: #737881
+}
+
+.qrSec .qrLoading {
+    position: relative
+}
+
+.qrSec .qrLoading p {
+    height: 200px;
+    padding-top: 163px
+}
+
+.qrSec .qrLoadingCircle {
+    position: absolute;
+    top: 54px;
+    left: 205px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    animation: aniRotate .8s linear infinite
+}
+
+.qrSec .qrLoadingCircle:after,.qrSec .qrLoadingCircle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_loading.svg) no-repeat 0 0
+}
+
+.qrSec .qrLoadingCircle:before {
+    animation: aniSwing 3s linear infinite
+}
+
+.qrSec .qrLoadingCircle:after {
+    animation: aniSwing2 3s linear infinite
+}
+
+.qrSec button {
+    width: 122px;
+    height: 32px;
+    margin-top: 19px;
+    color: #9fa1a7;
+    border: 2px solid #9fa1a7;
+    background-color: #fff;
+    transition: all .15s linear
+}
+
+.qrSec button:hover {
+    color: #fff;
+    background-color: #9fa1a7;
+    transition: all .2s linear
+}
+
+.btLogin button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-family: NEXON Gothic Bold;
+    color: #fff;
+    background-color: #17191d;
+    transition: all .15s linear
+}
+
+.btLogin button:active,.btLogin button:hover {
+    outline: 0;
+    background-color: #07f;
+    transition: all .2s linear
+}
+
+.btLogin button .idLoginInnerWrap {
+    position: relative
+}
+
+.btLogin button .idLoginInnerWrap .recentLoginBox {
+    position: absolute;
+    padding-top: 1px;
+    margin-top: -3px
+}
+
+.recentLoginBox {
+    width: 75px;
+    height: 24px;
+    color: #fff;
+    background-color: #07f;
+    padding: 3px 6px;
+    margin-left: 14px;
+    margin-top: -3px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -.3px;
+    font-family: Noto Sans,Apple SD Gothic Neo
+}
+
+.recentLoginBox:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    border-right: 6px solid #07f;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent
+}
+
+.otpLogin .btLogin {
+    padding-top: 18px
+}
+
+.loginMenu {
+    position: relative;
+    height: 40px;
+    padding-top: 12px
+}
+
+.loginMenu a {
+    font-weight: 700;
+    letter-spacing: -.6px;
+    color: #737881;
+    margin-right: 8px;
+    transition: all .15s linear;
+    vertical-align: baseline
+}
+
+.loginMenu a:hover {
+    color: #07f;
+    transition: all .2s linear
+}
+
+.loginMenu .sec {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin-right: 0;
+    color: #07f
+}
+
+.loginMenu .sec:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 2px -3px 0;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_login.svg) no-repeat 0 -600px
+}
+
+.loginMenu .sec:hover {
+    text-decoration: underline
+}
+
+.tpa {
+    padding-top: 30px
+}
+
+.tpa button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 8px;
+    margin-top: 6px;
+    border: 1px solid #d2d6e0;
+    border-radius: 2px;
+    font-family: NotoSansKRMedium;
+    font-size: 14px;
+    color: #51555d;
+    background-color: #fff;
+    transition: all .15s linear
+}
+
+.tpa button:active,.tpa button:hover {
+    outline: 0;
+    background-color: #eee;
+    transition: all .2s linear
+}
+
+.tpa button:first-child {
+    margin-top: 0
+}
+
+.tpa button span {
+    line-height: 1.57;
+    letter-spacing: -.3px
+}
+
+.tpa button .tpaLoginInnerWrap {
+    height: 20px;
+    display: flex;
+    justify-items: center
+}
+
+.tpa button .tpaLoginInnerWrap .tpaLoginTxt {
+    padding-left: 20px
+}
+
+.tpa button .tpaLoginInnerWrap .recentLoginBox {
+    position: relative
+}
+
+.tpa .icon {
+    left: 8px;
+    width: 22px;
+    height: 22px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_new_logo.svg) no-repeat 0 -50px
+}
+
+.tpa .btNexon .icon {
+    background-position: 0 -50px
+}
+
+.tpa .btFacebook .icon {
+    background-position: 0 -100px
+}
+
+.tpa .btGoogle .icon {
+    background-position: 0 -150px
+}
+
+.tpa .btNaver .icon {
+    background-position: 0 -200px
+}
+
+.tpa .btApple .icon {
+    background-position: 0 -250px
+}
+
+.tpa .btNexon {
+    display: none
+}
+
+.tpa .btNexon:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    display: block;
+    width: 10px;
+    height: 6px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_login.svg) no-repeat 0 -200px
+}
+
+.optGuide,.qrGuide {
+    position: relative;
+    padding-top: 20px;
+    margin-top: 68px;
+    border-top: 1px solid #e5e8eb
+}
+
+.optGuide h3,.qrGuide h3 {
+    font-weight: 700;
+    letter-spacing: -.6px;
+    color: #737881
+}
+
+.optGuide a,.optGuide button,.qrGuide a,.qrGuide button {
+    font-weight: 700;
+    color: #9fa1a7;
+    transition: all .15s linear
+}
+
+.optGuide a:hover,.optGuide button:hover,.qrGuide a:hover,.qrGuide button:hover {
+    color: #07f;
+    transition: all .2s linear
+}
+
+.optGuide ol,.qrGuide ol {
+    padding-top: 10px
+}
+
+.optGuide li,.qrGuide li {
+    line-height: 1.67;
+    letter-spacing: -.6px;
+    text-align: left;
+    color: #9fa1a7
+}
+
+.optGuide a,.qrGuide a {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    letter-spacing: -.6px
+}
+
+.qrGuide button {
+    text-decoration: underline
+}
+
+.layerGuide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 10000
+}
+
+.layerGuide.layerShow {
+    display: block
+}
+
+.layerGuide .layer {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 360px;
+    height: 710px;
+    margin: 0 0 0 -180px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.16);
+    background-color: #fff
+}
+
+.layerGuide h3 {
+    padding: 40px 0 0;
+    letter-spacing: -.6px;
+    color: #737881
+}
+
+.layerGuide h3 img {
+    display: block;
+    margin: 0 auto 18px
+}
+
+.layerGuide p {
+    padding-top: 20px
+}
+
+.layerGuide .btClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    background: url(https://rs.nxfs.nexon.com/nxlogin/images/set_login.svg) no-repeat 0 -300px;
+}
+
+@keyframes aniRotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes aniSwing {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(-70deg)
+    }
+
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes aniSwing2 {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(70deg)
+    }
+
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 328px;
+    height: 80px;
+    padding: 32px 0 0;
+    text-align: center
+}
+
+.footer p {
+    font-size: 11px;
+    color: #9fa1a7
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nexon</title>
+  <link rel="stylesheet" href="./exam.css">
+</head>
+<body>
+	<div class="skipNav"><a href="#contents">skip to contents</a></div>
+	<div id="wrapper">
+		<div class="header">
+			
+	
+	<h1 class="logo">
+		<a href="https://www.nexon.com/Home/Game" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Logo"}'><span class="acchidden">NEXON</span></a>
+	</h1>
+	<div class="headerMsg">
+		<p>
+			<!-- <strong class="pcbangMsg">PC방 접속중</strong>
+			<span class="nexonMsg">공공장소에서는 넥슨 ID/비밀번호 기록이 남지 않도록 넥슨플레이로 로그인하세요!</span>
+			<span class="otpMsg">넥슨 ID/비밀번호 기록이 남지 않는 일회용 로그인!</span>
+			<span class="qrMsg">넥슨 ID/비밀번호 기록이 남지 않는 QR 로그인!</span> -->
+		</p>
+	</div>
+	<div class="tab">
+		<ul>
+			<li class="btNexon"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_NexonID"}'>넥슨ID 로그인</button></li>
+			<li class="btOtp"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_OneTime"}' onClick="location.href='exam.html'">일회용 로그인</button></li>
+			<li class="btQr"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_QR"}'>QR 로그인</button></li>
+		</ul>
+	</div>
+
+		</div>
+		<div id="contents">
+			
+	<div class="loginSec">
+	
+		<!--ID Login--->
+		<div class="nexonLogin" id="nexonLogin">
+			<p class="loginMsg">넥슨 ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 넥슨 ID입니다.</p>
+			<fieldset>
+				<legend class="acchidden">넥슨ID 로그인</legend>
+				<div class="id"><input type="text" class="input01" id="txtNexonID" placeholder="넥슨ID (아이디 또는 이메일)"></div>
+				<p class="inputMsg nexonid">넥슨ID (아이디 또는 이메일)를 입력해주세요.</p>
+				<div class="pass"><input type="password" class="input01" id="txtPWD" placeholder="비밀번호"></div>
+				<p class="inputMsg password">비밀번호를 입력해주세요.</p>
+				<div class="saveid" style="display:none"><input type="checkbox" id="chkKeepLogin" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"KeepLogin"}'><label for="chkKeepLogin">로그인 상태 유지</label></div>
+				<div class="btLogin">
+                    <button type="button" class="button01" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"IDLogin"}'>
+                        <span class="idLoginInnerWrap">
+                            넥슨ID 로그인
+                        </span>
+                    </button>
+                </div>
+			</fieldset>
+		</div>
+		<p class="loginMenu">
+			<a href="#" class="join" onclick="$.NXLogin.Join('P_LOGIN'); return false;">회원가입</a>
+			<a href="#" class="schId" onclick="$.NXLogin.findID('P_LOGIN'); return false;">넥슨ID 찾기</a>
+			<a href="#" class="schPass" onclick="$.NXLogin.findPW('P_LOGIN'); return false;">비밀번호 찾기</a>
+			<a href="https://security-center.nexon.com" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Security"}' class="sec">보안센터</a>
+		</p>
+		
+		<div class="tpa">
+			<button type="button" class="btFacebook" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"TPA_Facebook"}'>
+                <span class="tpaLoginInnerWrap">
+                    <span class="icon"></span>
+                    <span class="tpaLoginTxt">Facebook 계정으로 로그인</span>
+                </span>
+			</button>
+			<button type="button" class="btGoogle" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"TPA_Google"}'>
+                <span class="tpaLoginInnerWrap">
+                    <span class="icon"></span>
+                    <span class="tpaLoginTxt">Google 계정으로 로그인</span>
+                </span>
+			</button>
+			<button type="button" class="btNaver" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"TPA_Naver"}'>
+                <span class="tpaLoginInnerWrap">
+                    <span class="icon"></span>
+                    <span class="tpaLoginTxt">Naver 계정으로 로그인</span>
+                </span>
+			</button>
+			<button type="button" class="btApple" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"TPA_Apple"}'>
+                <span class="tpaLoginInnerWrap">
+                    <span class="icon"></span>
+                    <span class="tpaLoginTxt">Apple 계정으로 로그인</span>
+                </span>
+			</button>
+			<button type="button" class="btNexon" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"NexonID_Login","Type":"NexonID"}'>
+                <span class="icon"></span>
+                <span>Nexon 계정으로 로그인</span>
+			</button>
+		</div>
+		
+		<script type="text/javascript">
+			
+			(function () {
+                $(window).bind("load", function () { layoutChange("layoutNexon"); $('#txtNexonID').val('');$('#txtNexonID').focus(); });
+			})();
+			
+        </script>
+	
+	</div>
+	<script type="text/javascript">
+		(function ($) {
+			$.setCookie('NXTPA', '-');
+            $.setCookie('NXSIGNUP', '-1');
+			$('.tab .btNexon button').bind('click', function () {
+                document.location = makeLoginUrlByType('login', 'https://www.nexon.com/Home/Game', '-', 0, -1);
+			});
+
+			$('.tab .btOtp button').bind('click', function () {
+                document.location = makeLoginUrlByType('pcbang', 'https://www.nexon.com/Home/Game', '-', 0, -1);
+			});
+
+			$('.tab .btQr button').bind('click', function () {
+                document.location = makeLoginUrlByType('qr', 'https://www.nexon.com/Home/Game', '-', 0, -1);
+			});
+
+            $(".qrGuide button").bind("click", function () {
+                $(".layerGuide").addClass("layerShow");
+            });
+        })(jQuery);
+    </script>
+
+		</div>
+		<div class="footer">
+			<p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+		</div>
+	</div>
+
+</body>
+</html>

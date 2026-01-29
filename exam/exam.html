@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nexon</title>
+  <link rel="stylesheet" href="./exam.css">
+</head>
+<body>
+	<div class="skipNav"><a href="#contents">skip to contents</a></div>
+	<div id="wrapper">
+		<div class="header">
+			
+	
+	<h1 class="logo">
+		<a href="https://www.nexon.com/Home/Game" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Logo"}'><span class="acchidden">NEXON</span></a>
+	</h1>
+	<div class="headerMsg">
+		<p>
+			<!-- <strong class="pcbangMsg">PC방 접속중</strong>
+			<span class="nexonMsg">공공장소에서는 넥슨 ID/비밀번호 기록이 남지 않도록 넥슨플레이로 로그인하세요!</span>
+			<span class="otpMsg">넥슨 ID/비밀번호 기록이 남지 않는 일회용 로그인!</span> -->
+			<span class="qrMsg">넥슨 ID/비밀번호 기록이 남지 않는 QR 로그인!</span>
+		</p>
+	</div>
+	<div class="tab">
+		<ul>
+			<li class="btNexon"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_NexonID"}' onClick="location.href='exam1.html'">넥슨ID 로그인</button></li>
+			<li class="btOtp"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_OneTime"}'>일회용 로그인</button></li>
+			<li class="btQr"><button type="button" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"Tab_QR"}'>QR 로그인</button></li>
+		</ul>
+	</div>
+
+		</div>
+		<div id="contents">
+			
+	<div class="loginSec">
+		<div class="otpLogin" id="otpLogin">
+			<p class="otpLoginMsg"><strong>넥슨플레이>넥슨인증기>일회용 로그인</strong>에서 8자리 숫자를 입력해주세요.</p>
+			<p class="loginMsg"></p>
+			<fieldset>
+				<legend class="acchidden">일회용 로그인</legend>
+				<div class="otppass">
+					<div class="otppass1"><input type="password" title="일회용 번호 앞 4자리" class="input01" placeholder="4자리" id="txtPCBangLogin1" maxlength="4" onkeypress="return OnlyNumbers(event, '.inputMsg', '일회용 로그인 번호는 숫자만 입력 가능합니다.')" ></div>
+					<div class="otppass2"><input type="password" title="일회용 번호 뒤 4자리" class="input01" placeholder="4자리" id="txtPCBangLogin2" maxlength="4" onkeypress="return OnlyNumbers(event, '.inputMsg', '일회용 로그인 번호는 숫자만 입력 가능합니다.')" ></div>
+				</div>
+				<p class="inputMsg">일회용 로그인 번호를 입력해주세요.</p>
+				<div class="btLogin"><button type="button" class="button01" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"OneTime_Login","Type":"OneTimeLogin"}'>일회용 로그인</button></div>
+			</fieldset>
+        </div>
+
+		<div class="optGuide">
+			<h3>일회용 로그인 이용 가이드</h3>
+			<a href="http://nexonplay.nexon.com/" target="_blink" data-a2s="click" data-object="P_LOGIN" data-option='{"Name":"OneTime_Login","Type":"NexonPlay_Info"}'>넥슨플레이 안내 ></a>
+			<ol>
+				<li>1. 넥슨플레이 앱을 실행시켜주세요.</li>
+				<li>2. 메뉴 탭에서 [넥슨인증기] 메뉴를 클릭, [일회용 로그인] 버튼을 클릭해주세요.</li>
+				<li>3. 8자리 번호를 입력하고 로그인 버튼을 클릭해주세요.</li>
+			</ol>
+		</div>
+	
+	</div>
+	<div class=""></div>
+		</div>
+		<div class="footer">
+			<p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</body>
+</html>
